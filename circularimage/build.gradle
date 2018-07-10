@@ -1,8 +1,6 @@
 apply plugin: 'com.android.library'
 apply plugin: 'com.github.dcendents.android-maven'
-group='com.github.atul-singh-bs'
-//apply plugin 'com.github.dcendents.android-maven'
-//group = 'com.github.atul-singh-bs'
+//group='com.github.atul-singh-bs'
 
 android {
     compileSdkVersion 26
@@ -41,3 +39,31 @@ dependencies {
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
 }
+ext {
+    bintrayRepo = 'CircularImageView' // It will be repository name on bintray account
+    bintrayName = 'CircularImageView'   // Has to be same as your library module name (Package name on bintray)
+
+    publishedGroupId = 'com.example.circularimage.circularimage'
+    libraryName = 'Circularimage'
+    artifact = 'circularimage'     // Has to be same as your library module name
+
+    libraryDescription = 'Android Library to set any text\'s first letter into image view'
+
+    // Your github repo link
+    siteUrl = 'https://github.com/atul-singh-bs/CircularImageView'
+    gitUrl = 'https://github.com/atul-singh-bs/CircularImageView.git'
+    githubRepository= 'atul-singh-bs/CircularImageView'
+
+    libraryVersion = '1.0'
+
+    developerId = 'atulsinghbigstep'
+    developerName = 'Atul Singh'
+    developerEmail = 'atul.singh@bigsteptech.com'
+
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ["Apache-2.0"]
+}
+
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/installv1.gradle'
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/bintrayv1.gradle'
