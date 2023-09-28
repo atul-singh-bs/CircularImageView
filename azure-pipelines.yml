@@ -24,11 +24,3 @@ stages:
             echo "##vso[task.setvariable variable=JAVA_HOME]$(JAVA_HOME_11_X64)"
             echo "##vso[task.setvariable variable=PATH]$(JAVA_HOME_11_X64)/bin:$(PATH)"
           displayName: "Set java version"
-
-        - task: GooglePlay@4
-          displayName: Update data safety rule
-          inputs:
-            operation: 'Update data safety rule'
-            serviceAccountCredentials: 'api-play-store.json'
-            dataSafetyCSV: 'my_export.csv'
-            appPackageName: 'com.example.circularimage.circularimageview'
