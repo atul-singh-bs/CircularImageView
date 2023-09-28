@@ -9,7 +9,7 @@ pool:
   vmImage: 'macos-latest'
 
 stages:
-- stage: VALUE_UPDATE
+- stage: value
   condition: eq(variables['Build.Reason'], 'Manual')
   jobs:
     - job: Updating rule
